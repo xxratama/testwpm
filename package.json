@@ -1,0 +1,8 @@
+{
+  "name": "wakprem",
+  "private": true,
+  "description": "Website toko aplikasi premium Wak Prem (statis + Vercel serverless di folder api/)",
+  "engines": {
+    "node": "22.x"
+  }
+}

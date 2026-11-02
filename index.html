@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wak Prem — Aplikasi Premium Harga Merakyat</title>
+  <meta name="description" content="Beli Gemini AI Pro, ChatGPT Plus, Spotify Premium, Apple Music, CapCut Pro dan aplikasi premium lainnya. Bayar langsung di website via QRIS, e-wallet, atau virtual account. Proses cepat & bergaransi.">
+  <meta name="theme-color" content="#5B3DF5">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wakprem.com/">
+  <meta property="og:title" content="Wak Prem — Aplikasi Premium Harga Merakyat">
+  <meta property="og:description" content="Gemini AI Pro, ChatGPT Plus, Spotify, Apple Music, CapCut Pro. Bayar QRIS / e-wallet / VA langsung di website.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=localStorage.getItem('wakprem:theme');if(t)document.documentElement.dataset.theme=JSON.parse(t)}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Lewati ke konten</a>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#/" aria-label="Wak Prem — beranda">
+        <span class="logo-mark" data-icon="crown" data-size="20"></span>
+        <span>wak<b>prem</b></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#/" data-action="scroll" data-target="katalog">Katalog</a>
+        <a href="#/" data-action="scroll" data-target="cara-order">Cara Order</a>
+        <a href="#/" data-action="scroll" data-target="faq">FAQ</a>
+        <a href="#/cek">Cek Pesanan</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" data-action="theme" aria-label="Ganti tema terang/gelap" id="themeBtn"></button>
+        <button class="icon-btn" data-action="open-cart" aria-label="Buka keranjang">
+          <span data-icon="bag"></span>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+        <button class="icon-btn menu-btn" data-action="menu" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span data-icon="menu"></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#/" data-action="scroll" data-target="katalog"><span data-icon="package" data-size="18"></span>Katalog</a>
+      <a href="#/" data-action="scroll" data-target="cara-order"><span data-icon="list" data-size="18"></span>Cara Order</a>
+      <a href="#/" data-action="scroll" data-target="faq"><span data-icon="info" data-size="18"></span>FAQ</a>
+      <a href="#/cek"><span data-icon="receipt" data-size="18"></span>Cek Pesanan</a>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#/"><span class="logo-mark" data-icon="crown" data-size="20"></span><span>wak<b>prem</b></span></a>
+          <p>Toko aplikasi premium dengan harga merakyat. Bayar langsung di website, akun dikirim ke email kamu.</p>
+        </div>
+        <div>
+          <h4>Produk</h4>
+          <ul id="footerProducts"></ul>
+        </div>
+        <div>
+          <h4>Bantuan</h4>
+          <ul>
+            <li><a href="#/cek">Cek pesanan</a></li>
+            <li><a href="#/" data-action="scroll" data-target="cara-order">Cara order</a></li>
+            <li><a href="#/" data-action="scroll" data-target="faq">FAQ & garansi</a></li>
+            <li><a href="#/" data-action="open-chat" data-live="">Chat admin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pembayaran</h4>
+          <div class="pay-logos" id="footerPay"></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Wak Prem · wakprem.com</span>
+        <span class="disclaimer">Wak Prem adalah reseller independen dan tidak berafiliasi dengan Google, OpenAI, Apple, Spotify, ByteDance, Canva, Zoom, Scribd, maupun Netflix. Semua merek dagang milik pemiliknya masing-masing.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay" data-action="close-sheets"></div>
+  <aside class="sheet" id="productSheet" role="dialog" aria-modal="true" aria-label="Detail produk" hidden></aside>
+  <aside class="sheet" id="cartSheet" role="dialog" aria-modal="true" aria-label="Keranjang" hidden></aside>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js" defer></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/catalog.js" defer></script>
+  <script src="assets/js/orders.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/livechat.js" defer></script>
+  <script src="assets/js/chat.js" defer></script>
+</body>
+</html>
